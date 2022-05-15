@@ -41,7 +41,6 @@ namespace Tugas_PBO
             DataTable dt;
             if (SqlDBHelper.ExecuteDataSet(out dt, "Select * from suster order by id_suster", CommandType.Text))
             {
-                //if (SqlDBHelper.ExecuteDataSet(out dt, "Select * from account order by id", CommandType.Text))
                 lblmsg.Text = String.Empty;
                 lblmsg2.Text = String.Empty;
                 lblmessage.Text = String.Empty;
@@ -65,7 +64,7 @@ namespace Tugas_PBO
                 txtSusterID.Text = ""; txtNama.Text = ""; txtNomor_hp.Text = ""; txtAlamat.Text = "";
                 GridView1.Visible = false;
                 lblmsg.Text = String.Empty;
-                lblmsg2.Text = "Failed, ID and Username Should Be Unique";
+                lblmsg2.Text = "Failed, ID Should Be Unique";
             }
 
         }
